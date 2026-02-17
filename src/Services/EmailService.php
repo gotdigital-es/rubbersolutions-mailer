@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace RubberSolutions\Mailer\Services;
+
 
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
