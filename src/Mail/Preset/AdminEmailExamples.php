@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Admin;
+namespace RubberSolutions\Mailer\Mail\Preset;
 
 use App\Mail\InternalMailable;
 use RubberSolutions\ShopCore\Models\Customer;
