@@ -1,0 +1,66 @@
+{
+  "name": "rubbersolutions/rubbersolutions-mailer",
+  "description": "Email notification system for Rubber Solutions storefronts (Laravel package)",
+  "type": "library",
+  "license": "proprietary",
+  "keywords": [
+    "rubber-solutions",
+    "email",
+    "notifications",
+    "laravel",
+    "aws-ses",
+    "mailer"
+  ],
+  "authors": [
+    {
+      "name": "Rubber Solutions",
+      "email": "tech@rubbersolutions.es",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^11.0 || ^12.0",
+    "aws/aws-sdk-php": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "laravel/pint": "^1.0",
+    "phpstan/phpstan": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RubberSolutions\\Mailer\\": "src/",
+      "RubberSolutions\\Mailer\\Database\\Factories\\": "database/factories/",
+      "RubberSolutions\\Mailer\\Database\\Seeders\\": "database/seeders/"
+    },
+    "files": [
+      "src/Helpers/mail.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RubberSolutions\\Mailer\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RubberSolutions\\Mailer\\Providers\\MailerServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": "pint",
+    "lint:fix": "pint --fix"
+  },
+  "repositories": {
+    "rubbersolutions": {
+      "type": "vcs",
+      "url": "https://github.com/gotdigital-es/rubbersolutions-shop-core.git"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
